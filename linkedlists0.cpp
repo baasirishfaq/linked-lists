@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// putting and displaying elements of a linked list
+// making a linked list and displaying elements of a linked list
 
 struct Node
 {
