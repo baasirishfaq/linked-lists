@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// linked list, check whether element is present or not
+// linked list, check whether element is present or not, linear search
 
 struct Node
 {
