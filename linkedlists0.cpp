@@ -40,23 +40,6 @@ public:
         }
     }
 
-    void deleteAtEnd()
-    {
-        if (head == NULL)
-        {
-            cout << "Nothing to delete";
-        }
-        else
-        {
-            Node *temp = head;
-            while ((temp->next)->next != NULL)
-            {
-                temp = temp->next;
-            }
-            temp->next = NULL;
-        }
-    }
-
     void DisplayData()
     {
         Node *temp = head;
