@@ -38,4 +38,14 @@ public:
             temp->next = newNode;
         }
     }
+
+    void displaydata()
+    {
+        Node *temp = head;
+        while (temp != NULL)
+        {
+            cout << temp->data;
+            temp = temp->next;
+        }
+    }
 };
