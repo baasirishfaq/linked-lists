@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 struct Node
@@ -44,8 +43,16 @@ public:
         Node *temp = head;
         while (temp != NULL)
         {
-            cout << temp->data;
+            cout << temp->data << endl;
             temp = temp->next;
         }
     }
 };
+
+int main()
+{
+    LinkedList obj;
+    obj.insertdata(10);
+    obj.insertdata(20);
+    obj.displaydata();
+}
