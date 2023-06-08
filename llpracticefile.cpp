@@ -35,6 +35,7 @@ public:
             {
                 temp = temp->next;
             }
+            temp->next = newNode;
         }
     }
 };
