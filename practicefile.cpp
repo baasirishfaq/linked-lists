@@ -4,27 +4,53 @@
 #include <iostream>
 #include <algorithm>
 #include <cassert>
-
 using namespace std;
+
+class Student
+{
+private:
+    int a, b, c, d, e;
+    int total;
+
+public:
+    void input()
+    {
+        cin >> a >> b >> c >> d >> e;
+    }
+    int calculateTotalScore()
+    {
+        total = a + b + c + d + e;
+        return total;
+    }
+};
 
 int main()
 {
-    int scores[5], sum = 0;
-    {
-        cout << "enter marks for 5 subs :";
+    int n; // number of students
+    cin >> n;
+    Student *s = new Student[n]; // an array of n students
 
-        for (int i = 0; i < 5; i++)
+    for (int i = 0; i < n; i++)
+    {
+        s[i].input();
+    }
+
+    // calculate kristen's score
+    int kristen_score = s[0].calculateTotalScore();
+
+    // determine how many students scored higher than kristen
+    int count = 0;
+    for (int i = 1; i < n; i++)
+    {
+        int total = s[i].calculateTotalScore();
+        if (total > kristen_score)
         {
-            cin >> scores[i];
+            count++;
         }
     }
 
-    int calculateTotalScore()
-    {
-        for (int i = 0; i < 5; i++)
-        {
-            sum = sum + scores[i];
-        }
-        cout << sum;
-    }
+    // print result
+    cout << count;
+
+    return 0;
 }
